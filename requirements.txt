@@ -1,0 +1,30 @@
+# ===== 核心 Web 框架 =====
+fastapi>=0.115.0
+uvicorn[standard]>=0.30.0
+pydantic>=2.7.0
+pydantic-settings>=2.3.0
+
+# ===== Agent 编排 =====
+langgraph>=0.2.0
+langchain-core>=0.3.0
+
+# ===== SQL 解析 / 校验（Schema 校验、语法校验、方言转换）=====
+sqlglot>=25.0.0
+sqlparse>=0.5.0
+
+# ===== 数据处理 / 统计异常检测 =====
+numpy>=1.26.0
+
+# ===== LLM API 调用（OpenAI 兼容协议：DeepSeek / Qwen / vLLM）=====
+httpx>=0.27.0
+
+# ===== 可选：真实向量检索 / Embedding（生产环境）=====
+# 默认 demo 使用内置轻量向量库，无需安装以下依赖即可跑通全流程
+# pymilvus>=2.4.0
+# sentence-transformers>=3.0.0      # BGE-M3 等 Embedding 模型
+# FlagEmbedding>=1.2.0              # BGE 系列官方库
+# neo4j>=5.0.0                      # 血缘图谱
+# prophet>=1.1.0                    # 周期性时序异常检测（7.2 用到，可选）
+
+# ===== 测试 =====
+pytest>=8.0.0

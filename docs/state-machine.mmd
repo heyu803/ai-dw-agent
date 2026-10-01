@@ -1,0 +1,16 @@
+%% Text-to-SQL Agent 状态机（LangGraph）。可用 https://mermaid.live 在线渲染。
+flowchart TD
+    START([START]) --> rewrite[rewrite 查询改写]
+    rewrite --> retrieve[retrieve RAG召回]
+    retrieve --> schema_link[schema_link Schema Linking]
+    schema_link --> generate[generate 生成/修正SQL]
+    generate --> validate[validate 五层校验]
+    validate -->|ok 全部PASS| execute[execute 只读沙箱]
+    validate -->|retry ERROR且retry小于N| prepare_retry[prepare_retry 递增计数]
+    validate -->|blocked BLOCKER| return_error[return_error]
+    validate -->|exhausted 重试耗尽| return_error
+    prepare_retry --> generate
+    execute -->|ok| format[format 自然语言总结]
+    execute -->|failed| return_error
+    format --> END([END])
+    return_error --> END

@@ -1,0 +1,11 @@
+[project]
+name = "ai-dw-agent"
+version = "2.0.0"
+description = "AI 数仓提效与 Agent 智能体 —— 可运行参考实现（Text-to-SQL Agent + 数据质量治理 Agent）"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]
