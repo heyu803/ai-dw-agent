@@ -8,7 +8,7 @@
 
 ## 这个项目能让你学到什么
 
-如果你正在准备「AI 数仓 / LLM 应用 / Agent」相关岗位的面试，这个项目覆盖了几乎所有高频考点，并且**每一行核心代码都能跑、能改、能讲**：
+如果你正在准备「AI 数仓 / LLM 应用 / Agent」相关岗位的面试，这个项目覆盖了几乎所有高频考点
 
 - **Text-to-SQL Agent**：基于 LangGraph 的状态机编排，包含查询改写、RAG 召回、Schema Linking、SQL 生成、自校验、重试、沙箱执行的完整闭环。
 - **五层自校验引擎**：语法（syntax）、Schema、安全（security）、语义（semantic）、性能（performance），对应文档里的「规则引擎 5 层校验」。
